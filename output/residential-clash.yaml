@@ -4,26 +4,72 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe
-  server: googol.wookshop.ir
-  port: 17915
+- name: 🇺🇸 美国 (United States) 01 (家宽) - hah
+  server: 155.117.19.17
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 5fa748137b6d822308eea4611f474ad5
+  sni: www.bing.com
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
+- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
+  server: 218.237.185.234
+  port: 4652
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
+  server: 183.109.131.75
+  port: 20086
+  udp: true
+  type: vmess
+  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
+  server: hinet1.2yly.com
+  port: 24215
   udp: true
   type: vless
-  uuid: 439628ee-ef8e-4a3e-ba0f-091b7376dcb8
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
   tls: true
-  servername: googol.wookshop.ir
-  skip-cert-verify: false
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  udp: true
+  type: anytls
+  password: ec74bb6a86c2
+  sni: 684616s4.df6h451rh.xin
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
 rules:
 - MATCH,PROXIES

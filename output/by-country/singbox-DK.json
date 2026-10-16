@@ -5,7 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇩🇰 丹麦 (Denmark) 01 - xiaohe",
+      "tag": "🇩🇰 丹麦 (Denmark) 01 - hah",
       "server": "193.233.253.180",
       "server_port": 8444,
       "uuid": "f55e9aba-7b14-4f6f-b59a-d5b3d45c9309",
@@ -28,18 +28,28 @@
       }
     },
     {
+      "type": "vmess",
+      "tag": "🇩🇰 丹麦 (Denmark) 02 - hah",
+      "server": "zfd-boardv2.kunlun01dns.com",
+      "server_port": 16305,
+      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
+      "security": "auto"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇰 丹麦 (Denmark) 01 - xiaohe"
+        "🇩🇰 丹麦 (Denmark) 01 - hah",
+        "🇩🇰 丹麦 (Denmark) 02 - hah"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇰 丹麦 (Denmark) 01 - xiaohe"
+        "🇩🇰 丹麦 (Denmark) 01 - hah",
+        "🇩🇰 丹麦 (Denmark) 02 - hah"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
