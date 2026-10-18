@@ -6,32 +6,31 @@ log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - hah
   server: 213.183.63.60
-  port: 9085
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 9ej82EKe2gq7gLAM
-- name: 🇧🇬 保加利亚 (Bulgaria) 02 - hah
-  server: 213.183.63.60
   port: 9061
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: 4R3hUfZ2FHhDmNcP
-- name: 🇧🇬 保加利亚 (Bulgaria) 03 - hah
+- name: 🇧🇬 保加利亚 (Bulgaria) 02 - hah
   server: 213.183.63.60
-  port: 9054
+  port: 9085
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: VcFuyXvND2yQWSFY
-- name: 🇧🇬 保加利亚 (Bulgaria) 04 - hah
-  server: ruot.ayucloudservices.nl
-  port: 35000
+  password: 9ej82EKe2gq7gLAM
+- name: 🇧🇬 保加利亚 (Bulgaria) 03 - hah
+  server: 195.123.226.21
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 499eb131-f2b8-46b5-8fd0-108c375ed525
+  type: vless
+  uuid: 6589c320-db68-43cd-a273-b46299bab355
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo
+    short-id: 77bb0d07bddbc832
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,7 +39,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - hah
   - 🇧🇬 保加利亚 (Bulgaria) 02 - hah
   - 🇧🇬 保加利亚 (Bulgaria) 03 - hah
-  - 🇧🇬 保加利亚 (Bulgaria) 04 - hah
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +47,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - hah
   - 🇧🇬 保加利亚 (Bulgaria) 02 - hah
   - 🇧🇬 保加利亚 (Bulgaria) 03 - hah
-  - 🇧🇬 保加利亚 (Bulgaria) 04 - hah
 rules:
 - MATCH,PROXIES

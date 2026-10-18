@@ -5,22 +5,24 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - hah",
-      "server": "156.226.168.221",
-      "server_port": 35193,
-      "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇵🇹 葡萄牙 (Portugal) 01 - hah",
+      "server": "31.192.237.186",
+      "server_port": 2053,
+      "uuid": "d18c6897-2849-456a-8c46-d7ecece47c20",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "wzs.echo.net.eu.org",
+        "insecure": false,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "d_pn_DMaIxhCkNh80h0Mc7nP94hrlN--I8liOIREDxE",
-          "short_id": "e8daed2d"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlxQSwUEVRwJUx8BQRoaSVhfRhoOChkDDUs=",
+        "headers": {
+          "Host": "wzs.echo.net.eu.org"
         }
       }
     },
@@ -29,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇨 塞舌尔 (Seychelles) 01 - hah"
+        "🇵🇹 葡萄牙 (Portugal) 01 - hah"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇨 塞舌尔 (Seychelles) 01 - hah"
+        "🇵🇹 葡萄牙 (Portugal) 01 - hah"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

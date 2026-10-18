@@ -12,7 +12,7 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇦🇹 奥地利 (Austria) 02 - hah
-  server: api.mediapereval.cc
+  server: api.mediakaskad.cc
   port: 443
   udp: true
   type: vless
@@ -22,8 +22,8 @@ proxies:
   reality-opts:
     public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
     short-id: a8
-  servername: api.mediapereval.cc
-  client-fingerprint: qq
+  servername: api.mediakaskad.cc
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

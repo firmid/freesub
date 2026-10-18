@@ -24,32 +24,18 @@
       }
     },
     {
-      "type": "anytls",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - hah",
-      "server": "684616s4.df6h451rh.xin",
-      "server_port": 443,
-      "password": "ec74bb6a86c2",
-      "tls": {
-        "enabled": true,
-        "server_name": "684616s4.df6h451rh.xin",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - hah",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - hah"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - hah"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - hah",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - hah"
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - hah"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

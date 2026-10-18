@@ -16,133 +16,18 @@ proxies:
   obfs-password: CyG0RFxMjzs41uQD4OLuHQ==
   ports: 20000-30000
 - name: 🇧🇷 巴西 (Brazil) 02 - hah
-  server: platform103.golnamakcert.top
-  port: 80
+  server: 8dwou5alze.chhbuv.cn
+  port: 34534
   udp: true
   type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform103
-    headers:
-      Host: platform103.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 03 - hah
-  server: platform102.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 04 - hah
-  server: platform107.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform107
-    headers:
-      Host: platform107.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 05 - hah
-  server: platform108.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform108
-    headers:
-      Host: platform108.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 06 - hah
-  server: platform106.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform106
-    headers:
-      Host: platform106.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 07 - hah
-  server: platform109.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform109
-    headers:
-      Host: platform109.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 08 - hah
-  server: platform115.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform115
-    headers:
-      Host: platform115.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 09 - hah
-  server: platform117.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform117
-    headers:
-      Host: platform117.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 10 - hah
-  server: platform113.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 11 - hah
-  server: platform101.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇧🇷 巴西 (Brazil) 12 - hah
-  server: ruot.ayucloudservices.nl
-  port: 22019
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 48b0dc48-3fa1-44aa-bee9-505b26049ded
-- name: 🇧🇷 巴西 (Brazil) 13 - hah
-  server: platform118.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform118
-    headers:
-      Host: platform118.halalkhor.info
+  uuid: d9109567-3fc3-4e08-9cac-4d9162ef5a9f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AavBPGGJUpyGWiriV_Fbx-SrAvR5t-9mHeQY8uIltyo
+    short-id: 41b9cb10b696
+  servername: www.tue.nl
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -150,17 +35,6 @@ proxy-groups:
   - AUTO
   - 🇧🇷 巴西 (Brazil) 01 - hah
   - 🇧🇷 巴西 (Brazil) 02 - hah
-  - 🇧🇷 巴西 (Brazil) 03 - hah
-  - 🇧🇷 巴西 (Brazil) 04 - hah
-  - 🇧🇷 巴西 (Brazil) 05 - hah
-  - 🇧🇷 巴西 (Brazil) 06 - hah
-  - 🇧🇷 巴西 (Brazil) 07 - hah
-  - 🇧🇷 巴西 (Brazil) 08 - hah
-  - 🇧🇷 巴西 (Brazil) 09 - hah
-  - 🇧🇷 巴西 (Brazil) 10 - hah
-  - 🇧🇷 巴西 (Brazil) 11 - hah
-  - 🇧🇷 巴西 (Brazil) 12 - hah
-  - 🇧🇷 巴西 (Brazil) 13 - hah
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -168,16 +42,5 @@ proxy-groups:
   proxies:
   - 🇧🇷 巴西 (Brazil) 01 - hah
   - 🇧🇷 巴西 (Brazil) 02 - hah
-  - 🇧🇷 巴西 (Brazil) 03 - hah
-  - 🇧🇷 巴西 (Brazil) 04 - hah
-  - 🇧🇷 巴西 (Brazil) 05 - hah
-  - 🇧🇷 巴西 (Brazil) 06 - hah
-  - 🇧🇷 巴西 (Brazil) 07 - hah
-  - 🇧🇷 巴西 (Brazil) 08 - hah
-  - 🇧🇷 巴西 (Brazil) 09 - hah
-  - 🇧🇷 巴西 (Brazil) 10 - hah
-  - 🇧🇷 巴西 (Brazil) 11 - hah
-  - 🇧🇷 巴西 (Brazil) 12 - hah
-  - 🇧🇷 巴西 (Brazil) 13 - hah
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,83 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 01 - hah",
+      "server": "35.177.104.48",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 02 - hah",
+      "server": "13.135.17.74",
+      "server_port": 22222,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 03 - hah",
+      "server": "13.135.17.74",
+      "server_port": 22223,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 04 - hah",
+      "server": "35.177.104.48",
+      "server_port": 22222,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 05 - hah",
+      "server": "13.135.17.74",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 06 - hah",
+      "server": "35.177.104.48",
+      "server_port": 22224,
+      "uuid": "e4514801-0d5a-42ba-869f-39bd605aef9e"
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇮🇪 爱尔兰 (Ireland) 01 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 02 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 03 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 04 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 05 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 06 - hah"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇪 爱尔兰 (Ireland) 01 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 02 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 03 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 04 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 05 - hah",
+        "🇮🇪 爱尔兰 (Ireland) 06 - hah"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

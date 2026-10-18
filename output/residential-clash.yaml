@@ -14,14 +14,63 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
-  server: 218.237.185.234
+- name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - hah
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - hah
+  server: 206.1.100.148
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 53373a04-2dd2-472e-af5d-d55fbffa7dbd
+  tls: true
+  servername: game.jafarghasemivip.ir
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - hah
+  server: me17.msjia8844.site
+  port: 7443
+  udp: true
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
+- name: 🇸🇬 新加坡 (Singapore) 05 (家宽) - hah
+  server: 185.115.207.141
+  port: 443
+  udp: true
+  type: vless
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  tls: true
+  servername: wzs.echo.net.eu.org
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HV1ZNVwcHTQsJSgAJVBQUG0dCQEwWAx4AAg4c
+    headers:
+      Host: wzs.echo.net.eu.org
+- name: 🇰🇷 韩国 (South Korea) 06 (家宽) - hah
+  server: p141.panda001.net
   port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: qwerREWQ@@
-- name: 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
+- name: 🇸🇬 新加坡 (Singapore) 07 (家宽) - hah
+  server: s3.huhiuh.space
+  port: 18642
+  udp: true
+  type: hysteria2
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: s3.huhiuh.space
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 08 (家宽) - hah
   server: 183.109.131.75
   port: 20086
   udp: true
@@ -32,7 +81,7 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
+- name: 🇹🇼 中国台湾 (Taiwan) 09 (家宽) - hah
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -43,33 +92,33 @@ proxies:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
-  server: 684616s4.df6h451rh.xin
-  port: 443
-  udp: true
-  type: anytls
-  password: ec74bb6a86c2
-  sni: 684616s4.df6h451rh.xin
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇺🇸 美国 (United States) 01 (家宽) - hah
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - hah
+  - 🇸🇬 新加坡 (Singapore) 05 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 06 (家宽) - hah
+  - 🇸🇬 新加坡 (Singapore) 07 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 08 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 09 (家宽) - hah
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇺🇸 美国 (United States) 01 (家宽) - hah
-  - 🇰🇷 韩国 (South Korea) 02 (家宽) - hah
-  - 🇰🇷 韩国 (South Korea) 03 (家宽) - hah
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - hah
-  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - hah
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - hah
+  - 🇸🇬 新加坡 (Singapore) 05 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 06 (家宽) - hah
+  - 🇸🇬 新加坡 (Singapore) 07 (家宽) - hah
+  - 🇰🇷 韩国 (South Korea) 08 (家宽) - hah
+  - 🇹🇼 中国台湾 (Taiwan) 09 (家宽) - hah
 rules:
 - MATCH,PROXIES
