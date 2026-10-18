@@ -2,7 +2,11 @@ name: Update Subscriptions
 
 on:
   workflow_dispatch:  # 仅保留手动触发按钮
-
+  
+concurrency:
+  group: update-subscriptions-main
+  cancel-in-progress: false
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,6 +17,9 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,16 +50,46 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit and Push Results
+        env:
+          TARGET_BRANCH: main
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add -A output/ README.md
-          if git diff --staged --quiet; then
+
+          if git diff --cached --quiet; then
             echo "没有节点变动与内容更新。"
-          else
-            git commit -m "Auto Update: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
-            git push
+            exit 0
           fi
+
+          git commit -m "Auto Update: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
+
+          # 最多尝试同步并推送 3 次；绝不强制覆盖远程提交
+          for attempt in 1 2 3; do
+            echo "推送尝试 ${attempt}/3"
+
+            git fetch origin "${TARGET_BRANCH}"
+
+            if ! git rebase "origin/${TARGET_BRANCH}"; then
+              echo "::error::Rebase 失败，可能存在文件冲突。保留远程提交，不自动覆盖。"
+              git rebase --abort || true
+              exit 1
+            fi
+
+            if git push origin "HEAD:refs/heads/${TARGET_BRANCH}"; then
+              echo "推送成功。"
+              exit 0
+            fi
+
+            echo "推送失败，检查远程是否再次更新。"
+            sleep 2
+          done
+
+          echo "::error::连续 3 次推送失败，请检查远程提交和日志。"
+          exit 1
 
       - name: Purge jsDelivr CDN (post-push)
         if: success()
